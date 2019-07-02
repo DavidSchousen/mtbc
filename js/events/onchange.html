@@ -1,0 +1,31 @@
+<body>
+<div id="demo"></div>
+<button id="time">What time is it?</button>
+<select id="options">
+    <option>--Pick an Option--</option>
+    <option value="a">A</option>
+    <option value="b">B</option>
+    <option value="c">C</option>
+  </select>
+</body>
+<script>
+  function showDate(element) {
+     document.getElementById(element).innerHTML = Date();
+  }
+
+  // Function to add event listener to button#time
+  var btn = document.getElementById("time");
+  btn.addEventListener("click", ()=>{
+    showDate('demo');
+  });
+  function setValue(element) {
+    let option = document.getElementById('options').value;
+    document.getElementById(element).innerHTML = option;
+  }
+
+  // Function to add event listener to button#time
+  var list = document.getElementById("options");
+  list.addEventListener("change", ()=>{
+      setValue('demo')
+  });
+</script>

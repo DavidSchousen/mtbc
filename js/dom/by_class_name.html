@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Walking the DOM</title>
+  </head>
+  <body>
+    
+    <p>Fun with <a id="a" href="#">Pangrams</a>.</p>
+    <p id="bold">The quick brown fox jumped over the lazy dog.</p>
+    <p class="b blue">Jaded zombies acted quaintly but kept driving their oxen forward.</p>
+    <blockquote class="a b">The five boxing wizards jump quickly.</blockquote>
+
+    <input name="email" type="email">
+    <script>
+        // get all elements of class a
+        var list = document.getElementsByClassName('b');
+
+        // Make it red
+        list[0].style = 'color: #FF0000;';
+
+        // get all elements of class a b
+        var list2 = document.getElementsByClassName('a b');
+
+        //Make them bold and apply the color from list[0]
+        list2[0].style = 'font-weight: bold; color:' + list[0].style.color;
+    </script>
+  </body>
+</html>
